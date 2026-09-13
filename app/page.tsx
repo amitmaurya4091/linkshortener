@@ -2,10 +2,8 @@ import {
   ArrowUpRight,
   BarChart3,
   Check,
-  ChevronRight,
   Globe2,
   Link2,
-  MousePointerClick,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -49,25 +47,25 @@ export default async function Home() {
             </SignInButton>
             <SignUpButton mode="modal">
               <Button className="bg-[#d9f36a] text-[#101110] hover:bg-[#e7fa91]">
-                Get started <ArrowUpRight />
+                Sign up <ArrowUpRight />
               </Button>
             </SignUpButton>
           </Show>
         </div>
       </nav>
 
-      <section className="relative mx-auto grid w-full max-w-7xl gap-16 px-6 pb-24 pt-16 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:px-10 lg:pb-32 lg:pt-24">
-        <div className="max-w-2xl">
+      <section className="relative mx-auto w-full max-w-5xl px-6 pb-24 pt-16 text-center lg:px-10 lg:pb-32 lg:pt-24">
+        <div className="mx-auto max-w-4xl">
           <p className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#d9f36a]/25 bg-[#d9f36a]/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#d9f36a]">
             <Sparkles className="size-3.5" /> Link management, simplified
           </p>
-          <h1 className="max-w-2xl text-5xl font-semibold leading-[0.98] tracking-[-0.045em] sm:text-7xl lg:text-8xl">
+          <h1 className="mx-auto max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.045em] sm:text-7xl lg:text-8xl">
             Short links with a <span className="text-[#d9f36a]">longer</span> story.
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-8 text-[#a4aaa0]">
+          <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-[#a4aaa0]">
             Create memorable links, keep your campaigns organized, and understand what gets clicked. Shortline makes every destination easier to share.
           </p>
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
             <Show when="signed-out">
               <SignUpButton mode="modal">
                 <Button size="lg" className="h-11 bg-[#d9f36a] px-5 text-[#101110] hover:bg-[#e7fa91]">
@@ -75,36 +73,10 @@ export default async function Home() {
                 </Button>
               </SignUpButton>
             </Show>
-            <a href="#features" className="inline-flex h-11 items-center gap-1.5 px-4 text-sm font-medium text-[#a4aaa0] transition-colors hover:text-[#f4f1e9]">
-              Explore features <ChevronRight className="size-4" />
-            </a>
           </div>
-          <div className="mt-12 flex items-center gap-6 text-xs text-[#7c857a]">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs text-[#7c857a]">
             <span className="flex items-center gap-2"><Check className="size-4 text-[#d9f36a]" /> Free to get started</span>
             <span className="flex items-center gap-2"><Check className="size-4 text-[#d9f36a]" /> No credit card</span>
-          </div>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-lg lg:mt-8">
-          <div className="absolute -inset-5 rounded-[2rem] border border-[#d9f36a]/10 bg-[#d9f36a]/5 blur-2xl" />
-          <div className="relative overflow-hidden rounded-2xl border border-[#343d34] bg-[#171c18] shadow-2xl shadow-black/30">
-            <div className="flex items-center justify-between border-b border-[#343d34] px-5 py-4">
-              <div className="flex items-center gap-2 text-sm font-medium"><span className="size-2 rounded-full bg-[#d9f36a]" /> Your links</div>
-              <span className="text-xs text-[#7c857a]">This month</span>
-            </div>
-            <div className="p-5">
-              <div className="mb-5 flex items-end justify-between">
-                <div><p className="text-xs text-[#7c857a]">Total clicks</p><p className="mt-1 text-3xl font-semibold">24,892</p></div>
-                <span className="rounded-full bg-[#d9f36a]/10 px-2 py-1 text-xs font-medium text-[#d9f36a]">+18.4%</span>
-              </div>
-              <div className="flex h-24 items-end gap-2 border-b border-[#343d34] pb-3">
-                {[32, 45, 38, 58, 52, 76, 62, 86, 72, 94, 80, 100].map((height, index) => <span key={index} className="flex-1 rounded-t-sm bg-[#d9f36a] opacity-70" style={{ height: `${height}%` }} />)}
-              </div>
-              <div className="mt-5 space-y-3">
-                <div className="flex items-center justify-between rounded-lg bg-[#202720] px-3 py-3"><div><p className="text-sm font-medium">shortline.to/launch</p><p className="mt-1 text-xs text-[#7c857a]">Product launch · 12,483 clicks</p></div><MousePointerClick className="size-4 text-[#d9f36a]" /></div>
-                <div className="flex items-center justify-between rounded-lg bg-[#202720] px-3 py-3"><div><p className="text-sm font-medium">shortline.to/notes</p><p className="mt-1 text-xs text-[#7c857a]">Field notes · 8,241 clicks</p></div><MousePointerClick className="size-4 text-[#d9f36a]" /></div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
