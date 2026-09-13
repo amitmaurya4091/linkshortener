@@ -1,3 +1,7 @@
+---
+description: Read this before implementing any user-interface components. It describes the use of shadcn/ui, Base Nova styling, Tailwind CSS variables, and Lucide icons in Shortline.
+---
+
 # UI Components
 
 Use shadcn/ui for every user-interface element in Shortline.

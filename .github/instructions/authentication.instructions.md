@@ -1,3 +1,6 @@
+---
+description: This file provides instructions for authentication in the application, including the use of Clerk and route access rules.
+---
 # Authentication
 
 Use Clerk for all authentication in this application. Do not add or use any other authentication method.
